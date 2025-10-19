@@ -21,3 +21,104 @@ body {
 img {
     display: block;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto;
+    gap: 10px;
+    padding: 0 300px;
+}
+
+.gallery-item {
+    aspect-ratio: 1,2;
+    position: relative;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item-info {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background:rgba(0,0,0,0.5);
+    color: aliceblue;
+}
+
+.gallery-item:hover .gallery-item-info {
+display: flex;
+}
+
+.gallery-item-info ul{
+    display: flex;
+    list-style: none;
+}
+
+.gallery-item-info li {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    font-size: 15px;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 300px;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    border: 2rem solid green;
+    width: 200px;
+    height: 200px;
+}
+
+   .loader {
+  border: 16px solid #767474; /* Light grey background for the loader */
+  border-top-color: transparent; /* Blue border for the spinning part */
+  border-radius: 100%; /* Makes the div circular */
+  width: 120px; /* Sets the width of the loader */
+  height: 120px; /* Sets the height of the loader */
+  animation: spin 1s linear infinite; /* Applies the animation */
+  margin:0 auto;
+}
+
+/* Define the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    }
+/* dot targets the class */
+    .profile-user-settings{
+        display: flex;
+        gap: 10px;
+    }
+
+    .profile-stats ul{
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
